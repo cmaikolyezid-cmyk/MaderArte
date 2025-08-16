@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Encabezado --- */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #ffcc66;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #ffcc66;
+}
+
+/* Hero */
+.hero {
+    background: url('Captura\ de\ pantalla\ 2025-08-07\ 183337.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Productos */
+.productos {
+    padding: 50px;
+    background: #ecf0f1;
+}
+.productos h2 {
+    text-align: center;
+}
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.producto {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Info */
+.info {
+    padding: 40px;
+    text-align: center;
+}
+.redes {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.iconos a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background-color: #2c3e50;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.iconos a:hover {
+  background-color: #2c3e50;
+}
+
+
+/* --- Pie de página --- */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.5);
+}
+
+/* --- Animación --- */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

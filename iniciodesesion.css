@@ -1,0 +1,145 @@
+/* --- Estilos generales --- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: url('Captura\ de\ pantalla\ 2025-08-07\ 183337.png') no-repeat center center/cover;
+    color: white;
+}
+
+/* --- Encabezado --- */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #ffcc66;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #ffcc66;
+}
+
+/* --- Frase inspiradora --- */
+.frase {
+    background: rgba(0,0,0,0.4);
+    padding: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-style: italic;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* --- Formulario login --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    width: 320px;
+    backdrop-filter: blur(8px);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffcc66;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #ffcc66;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e6b85c;
+}
+
+.registro {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.registro a {
+    color: #ffcc66;
+    text-decoration: none;
+}
+
+/* --- Redes sociales --- */
+.redes {
+    text-align: center;
+    padding: 20px;
+}
+
+.iconos a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* --- Pie de página --- */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.5);
+}
+
+/* --- Animación --- */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

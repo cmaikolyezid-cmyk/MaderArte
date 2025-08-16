@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo con Carrito</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="Captura de pantalla 2025-08-07 184031.png" alt="MaderArte Logo">
+    </div>
+    <h1>Catálogo de Productos</h1>
+    <nav>
+        <a href="paginainicial.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="introduccion.html">Introducción</a>
+        <a href="iniciodesesion.html" class="active">Iniciar Sesión</a>
+    </nav>
+  </header>
+
+  <section class="filtros">
+    <input type="text" id="filtroNombre" placeholder="Buscar por nombre..." />
+    <input type="number" id="filtroPrecio" placeholder="Precio máximo" />
+    <button onclick="aplicarFiltros()">Filtrar</button>
+    <button onclick="resetearFiltros()">Reiniciar</button>
+  </section>
+
+  <main class="contenido">
+    <section id="catalogo" class="catalogo">
+      <!-- Productos generados dinámicamente -->
+    </section>
+
+    <aside class="carrito">
+      <h2>🛒 Carrito</h2>
+      <ul id="listaCarrito"></ul>
+      <p>Total: $<span id="total">0</span></p>
+      <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+      <button onclick="comprar()">Comprar</button>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+<section class="historial">
+  <h2>📋 Historial de Pedidos</h2>
+  <ul id="listaHistorial"></ul>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>

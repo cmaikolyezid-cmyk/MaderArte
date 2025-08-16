@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaderArte - Introducción</title>
+    <link rel="stylesheet" href="introduccion.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="Captura de pantalla 2025-08-07 184031.png" alt="MaderArte Logo">
+        </div>
+        <nav>
+             <a href="paginainicial.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="introduccion.html"class="active">Introducción</a>
+            <a href="iniciodesesion.html">Iniciar Sesión</a> 
+            
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Conoce la historia de MaderArte</h1>
+        </div>
+    </section>
+
+    <!-- Contadores -->
+    <section class="contadores">
+        <div class="contador">
+            <span data-numero="500">0</span>
+            <p>Clientes satisfechos</p>
+        </div>
+        <div class="contador">
+            <span data-numero="1200">0</span>
+            <p>Ventas realizadas</p>
+        </div>
+        <div class="contador">
+            <span data-numero="10">0</span>
+            <p>Años de experiencia</p>
+        </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="mision-vision">
+        <div class="card">
+            <img src="mision-vision-y-valores.svg" alt="Misión">
+            <h2>Misión</h2>
+            <p>Ofrecer productos artesanales de madera reciclada con diseños únicos, fomentando el cuidado del medio ambiente.</p>
+        </div>
+        <div class="card">
+            <img src="61a92dace297e.png" alt="Visión">
+            <h2>Visión</h2>
+            <p>Ser reconocidos a nivel nacional como líderes en productos de madera reciclada de alta calidad.</p>
+        </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="proceso">
+        <h2>Nuestro Proceso</h2>
+        <div class="pasos">
+            <div class="paso">
+                <img src="https://img.icons8.com/color/96/wood.png" alt="Reciclaje">
+                <h3>Recolección</h3>
+                <p>Seleccionamos madera reciclada de calidad.</p>
+            </div>
+            <div class="paso">
+                <img src="descarga.jpeg" alt="Artesanía">
+                <h3>Diseño</h3>
+                <p>Diseñamos cada pieza con dedicación.</p>
+            </div>
+            <div class="paso">
+                <img src="https://img.icons8.com/color/96/shipped.png" alt="Entrega">
+                <h3>Entrega</h3>
+                <p>Enviamos el producto a la puerta de tu hogar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="testimonio">
+            <p>"MaderArte ha transformado mi hogar con muebles únicos y ecológicos."</p>
+            <span>- Juan Pérez</span>
+        </div>
+        <div class="testimonio">
+            <p>"La calidad y el diseño son impresionantes. 100% recomendado."</p>
+            <span>- María López</span>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="galeria">
+        <h2>Galería</h2>
+        <div class="imagenes">
+            <img src="Imagen de WhatsApp 2024-10-02 a las 14.12.33_5281ee18.jpg" alt="Producto 1">
+            <img src="Imagen de WhatsApp 2024-10-02 a las 14.12.33_720dbe55.jpg" alt="Producto 2">
+            <img src="Imagen de WhatsApp 2024-10-02 a las 14.12.34_727c8c88.jpg" alt="Producto 3">
+        </div>
+    </section>
+     <section class="redes">
+      <h2>📲 Síguenos en redes sociales</h2>
+      <div class="iconos">
+        <a href="https://www.facebook.com/" target="_blank">🌐 Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank">📸 Instagram</a>
+        <a href="https://wa.me/573246752272" target="_blank">💬 WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 MaderArte | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Animación contadores
+        const counters = document.querySelectorAll("[data-numero]");
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute("data-numero");
+                const count = +counter.innerText;
+                const speed = 50; 
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 30);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    </script>
+</body>
+</html>
